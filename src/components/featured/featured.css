@@ -2,28 +2,36 @@
     width: 100%;
     max-width: 1024px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
     gap: 20px;
     z-index: 1;
+    
   }
   
   .featuredItem{
     position: relative;
     color: white;
     border-radius: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 250px;
-    flex:1
+    /* flex:1; */
   }
   
   .featuredImg{
-    width: 100%;
-    height: 100%;
+    /* width: 150px; */
+    height: 250px;
     object-fit: cover;
+    border-radius: 10px;
   }
   
   .featuredTitles{
     position: absolute;
     bottom: 20px;
     left: 20px;
+  
   }
+
+    
+    
+  

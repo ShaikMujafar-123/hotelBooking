@@ -15,7 +15,7 @@ const List = () => {
   const [date, setDate] = useState(location.state?.date);
   const [openDate, setOpenDate] = useState(false);
   const [options, setOptions] = useState(location.state?.options);
-  console.log("options",options.adult , options.children)
+  console.log("options",options?.adult , options?.children)
 
   const HOTELS_dATA = JSON.parse(localStorage.getItem("inventory")) ?? [];
 
@@ -69,6 +69,9 @@ const List = () => {
 
 console.log(filteredData1,"TTTTTTTT");
 
+const handleSearch = () => {
+  
+}
 
   
 
@@ -78,11 +81,13 @@ console.log(filteredData1,"TTTTTTTT");
       <Header type="list" />
       <div className="listContainer">
         <div className="listWrapper">
-          <div className="listSearch">
+          {/* <div className="listSearch">
             <h1 className="lsTitle">Search</h1>
             <div className="lsItem">
               <label>Destination</label>
-              <input placeholder={destination} type="text" />
+              <input placeholder={destination} type="text"
+              onChange={(e) => setDestination(e.target.value)}
+               />
             </div>
             <div className="lsItem">
               <label>Check-in Date</label>
@@ -142,8 +147,8 @@ console.log(filteredData1,"TTTTTTTT");
                 </div>
               </div>
             </div>
-            <button>Search</button>
-          </div>
+            <button onClick={handleSearch}>Search</button>
+          </div> */}
           <div className="listResult">
           {filteredData1.map((hotelRoomData, index) => (
               <SearchItem
